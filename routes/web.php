@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\DonorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('donor', DonorController::class);
+
+// Route::get('donor/edit', Controller::class);
+// Route::get('donor/edit', Controller::class, 'editIndex')->name('edit');
+// Route::get('/list', [App\Http\Controllers\DonorController::class, 'edit'])->name('donor.edit');
+
+// Route::get('/list', function () {
+//     return view('edit');
+// })->name('allListDonor');
